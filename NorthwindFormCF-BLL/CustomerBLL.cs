@@ -11,12 +11,36 @@ namespace NorthwindFormCF_BLL
     public class CustomerBLL
     {
 
-
-        public static List<Customer> GetCustomer()
+		public static NortwindDbContext db = new NortwindDbContext();
+		public static List<Customer> GetCustomer()
         {
-            NortwindDbContext db = new NortwindDbContext();
+           
             return db.Customers.ToList();
         }
+
+		public static void AddCustomer(Customer cus)
+		{
+
+			Customer customer = new Customer();
+			customer.CustomerID = cus.CustomerID;
+			customer.ContactName = cus.ContactName;
+			customer.CompanyName = cus.CompanyName;
+			customer.ContactTitle = cus.ContactTitle;
+			customer.City = cus.City;
+			customer.Address = cus.Address;
+			customer.Fax = cus.Fax;
+			customer.Phone = cus.Phone;
+			customer.PostalCode = cus.PostalCode;
+			customer.Region = cus.Region;
+
+			db.Customers.Add(customer);
+			db.SaveChanges();
+			
+
+
+
+				
+		}
 
 
     }

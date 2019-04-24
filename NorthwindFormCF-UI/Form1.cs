@@ -31,5 +31,11 @@ namespace NorthwindFormCF_UI
             frm.Show();
             
         }
-    }
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			frmAddCustomer frm = new frmAddCustomer();
+			frm.Show();
+		}
+	}
 }
