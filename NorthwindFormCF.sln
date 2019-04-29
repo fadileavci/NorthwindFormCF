@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindFormCF-BLL", "Nort
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindFormCF-entity", "NorthwindFormCF-entity\NorthwindFormCF-entity.csproj", "{090A295A-CFDA-4180-BBAA-D5E218E1D0D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindCF.WebUI", "NorthwindCF.WebUI\NorthwindCF.WebUI.csproj", "{B7AD907A-047B-49CF-805E-784A91823386}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{090A295A-CFDA-4180-BBAA-D5E218E1D0D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{090A295A-CFDA-4180-BBAA-D5E218E1D0D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{090A295A-CFDA-4180-BBAA-D5E218E1D0D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7AD907A-047B-49CF-805E-784A91823386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AD907A-047B-49CF-805E-784A91823386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AD907A-047B-49CF-805E-784A91823386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AD907A-047B-49CF-805E-784A91823386}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

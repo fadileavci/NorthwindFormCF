@@ -11,14 +11,33 @@ namespace NorthwindFormCF_BLL
     public class OrderBLL
     {
 
-
+       public static NortwindDbContext db = new NortwindDbContext();
         public static List<Order> GetOrder(string CustomerID)
         {
-            NortwindDbContext db = new NortwindDbContext();
+            
             return db.Orders.Where(o => o.CustomerID == CustomerID).ToList(); 
         }
 
+        public static List<OrderDto> searchOrder(string SearchText)
+        {
+
+            var Sorgu = from c in db.Customers
+                        join o in db.Orders on c.CustomerID  equals o.CustomerID
+                        where c.ContactName.Contains(SearchText) 
+
+                        select new OrderDto
+                        {
+
+                           OrderID = o.OrderID,
+                             ContactName=c.ContactName,
+                              ShipCountry =o.ShipCountry
+                        };
+
+            return Sorgu.ToList();
+
+        }
 
 
+        
     }
 }

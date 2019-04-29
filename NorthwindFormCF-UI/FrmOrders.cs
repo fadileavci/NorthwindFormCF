@@ -25,7 +25,20 @@ namespace NorthwindFormCF_UI
 
         private void FrmOrders_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = OrderBLL.GetOrder(CustomerId);
+            //dataGridView1.DataSource = OrderBLL.GetOrder(CustomerId);
+            //dataGridView1.DataSource = OrderBLL.searchOrder(textBox1.Text);
+            dataGridView1.DataSource = EmployeeBLL.searchOrderEmploye(textBox1.Text);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //dataGridView1.DataSource = OrderBLL.searchOrder(textBox1.Text);
+            dataGridView1.DataSource = EmployeeBLL.searchOrderEmploye(textBox1.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = EmployeeBLL.searchOrderEmploye(textBox1.Text);
         }
     }
 }

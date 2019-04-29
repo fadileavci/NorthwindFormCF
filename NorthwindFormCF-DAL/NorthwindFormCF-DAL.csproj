@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Mapping\CustomerMapping.cs" />
     <Compile Include="Mapping\CategoryMapping.cs" />
+    <Compile Include="Mapping\EmployeeMapping.cs" />
     <Compile Include="Mapping\OrderMapping.cs" />
     <Compile Include="NortwindDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

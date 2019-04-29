@@ -21,12 +21,15 @@ namespace NorthwindFormCF_DAL
         {
             modelBuilder.Configurations.Add(new CustomerMapping());
             modelBuilder.Configurations.Add(new OrderMapping());
+            modelBuilder.Configurations.Add(new EmployeeMapping());
         }
 
        
 
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+
+        public virtual DbSet<Employee> Employees { get; set; }
 
     }
 }

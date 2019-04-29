@@ -39,6 +39,8 @@ namespace NorthwindFormCF_UI
 			customer.PostalCode ="bn";
 			customer.Region =1;
 			CustomerBLL.AddCustomer(customer);
+
+            MessageBox.Show("Customer Eklendi");
 			
 		
 		
