@@ -31,7 +31,7 @@ namespace NorthwindFormCF_BLL
 			customer.Fax = cus.Fax;
 			customer.Phone = cus.Phone;
 			customer.PostalCode = cus.PostalCode;
-			customer.Region = cus.Region;
+			customer.Region = cus.Regions;
 
 			db.Customers.Add(customer);
 			db.SaveChanges();
