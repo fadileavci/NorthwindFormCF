@@ -23,14 +23,20 @@ namespace NorthwindCF.WebUI.Controllers
         }
         public ActionResult Kaydet()
         {
-            string musteriadi = Request.Params["txt_müsteriadi"];
-            Customer customer = new Customer();
-            customer.CustomerID = musteriadi.Substring(0, 5).ToUpper();
-            customer.ContactName = "fadile";
-            customer.ContactTitle =  " ";
-            customer.CompanyName = "";
-            customer.Address = " ";
-            customer.City = "istanbul";
+            string musteriID = Request.Params["txt_müsteriID"];
+			string musteriadi = Request.Params["txt_müsteriadi"];
+			string contactTitle = Request.Params["txt_contactTitle"];
+			string CompanyName = Request.Params["txt_companyName"];
+			string adres = Request.Params["txt_adres"];
+			string sehir= Request.Params["txt_sehir"];
+
+			Customer customer = new Customer();
+            customer.CustomerID = musteriID.Substring(0, 5).ToUpper();
+			customer.ContactName = musteriadi;
+			customer.ContactTitle = contactTitle;
+			customer.CompanyName = CompanyName;
+			customer.Address = adres;
+			customer.City = sehir;
             customer.Country = "sdfghj";
             customer.Fax = "fgh";
             customer.Phone = "fgh";
